@@ -1,0 +1,132 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.chip {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--bd);
+  background-color: var(--sf);
+  color: var(--tx);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.chip.marcado {
+  background-color: var(--tx);
+  color: var(--bg);
+  border-color: var(--tx);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+#semResultado {
+  display: none;
+  margin-top: 15px;
+  color: var(--tx2);
+}
+
+.productcard {
+  background-color: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.productcard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.productcard .img {
+  background-color: var(--soft);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productcard .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productcard .in {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.productcard h3 {
+  font-size: 16px;
+}
+
+.productcard p {
+  font-size: 13px;
+  color: var(--tx2);
+  line-height: 1.4;
+}
+
+.pr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.price {
+  font-family: Poppins, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.productcard button {
+  background-color: var(--pri);
+  color: var(--onp);
+  border: none;
+  padding: 0 16px;
+  min-height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.productcard button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 860px) {
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .productcard .img {
+    height: 110px;
+  }
+
+  .pr {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}

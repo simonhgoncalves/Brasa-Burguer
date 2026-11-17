@@ -1,0 +1,41 @@
+/* Busca de pedidos */
+.barrabusca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 999px;
+  padding: 0 20px;
+  min-height: 56px;
+  margin-bottom: 24px;
+}
+
+.barrabusca input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--tx);
+  font-size: 1em;
+}
+
+/* Pedidos e estados vazios */
+#exportarPedidos {
+  margin-bottom: 20px;
+}
+
+.pedido {
+  padding: 18px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-block;
+  background-color: var(--soft);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}

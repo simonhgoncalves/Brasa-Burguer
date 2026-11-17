@@ -1,0 +1,55 @@
+.formulario {
+  max-width: 760px;
+  margin: 32px auto;
+  background-color: var(--sf);
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+}
+
+.formulario h2 {
+  margin-top: 0;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+  margin-bottom: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.campo label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.campo input.invalido {
+  border: 2px solid var(--err);
+}
+
+.erro {
+  color: var(--err);
+  font-size: 0.85em;
+  font-weight: bold;
+  min-height: 1.1em;
+  margin-top: 4px;
+}
+
+.cont {
+  font-size: 0.8em;
+  color: var(--tx2);
+}
+
+@media (max-width: 860px) {
+  .campos {
+    grid-template-columns: 1fr;
+  }
+}

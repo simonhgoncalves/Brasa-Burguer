@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho | Brasa Burger</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+</head>
+
+<body class="claro">
+ <header>
+ <div class="wrap">
+  <nav>
+   <button id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+   <menu id="menu">
+    <li><a href="cardapio.html">Card&aacute;pio</a></li>
+    <li><a href="pedidos.html">Pedidos</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li class="menuauthmobile"><a id="btnEntrarMobile" href="login.html">Entrar</a></li>
+    <li class="menuauthmobile" id="menuCadastrarMobile"><a href="cadastro.html">Cadastrar</a></li>
+   </menu>
+  </nav>
+  <a id="logo" href="index.html">Brasa Burger</a>
+  <form id="formBusca" class="buscatopo" action="cardapio.html">
+   <input type="search" id="buscaTopo" maxlength="30" placeholder="Busque no card&aacute;pio..." aria-label="Buscar no card&aacute;pio">
+   <button type="submit" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+  </form>
+  <div class="acoes">
+   <a class="menucarrinho" href="carrinho.html" aria-label="Carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l2.4 12.1a2 2 0 0 0 2 1.6h10a2 2 0 0 0 2-1.6L22 7H5"/></svg><span id="contadorCarrinho">0</span></a>
+   <button id="temaBotao" type="button" aria-label="Alternar modo claro/escuro"><svg class="iconesol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="iconelua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg></button>
+   <a class="menucontorno" id="btnEntrar" href="login.html">Entrar</a>
+   <a class="menucheio" id="btnCadastrar" href="cadastro.html">Cadastrar</a>
+  </div>
+ </div>
+</header>
+ <main>
+        <section id="carrinho" class="pagina">
+            <h2>Carrinho</h2>
+            <div id="carrinho-area">
+                <div id="listaCarrinho"></div>
+                <aside id="resumo">
+                    <h3>Resumo</h3>
+                    <p>Subtotal: <b id="subtotal">R$ 0,00</b></p>
+                    <p>Entrega: <b id="entrega">R$ 0,00</b></p>
+                    <p class="total">Total: <b id="total">R$ 0,00</b></p>
+                    <label for="pagamento">Forma de pagamento</label>
+                    <select id="pagamento"><option>Pix</option><option>Cartão</option><option>Dinheiro</option></select>
+                    <button class="botao" id="finalizar">Finalizar pedido</button>
+                </aside>
+            </div>
+        </section>
+ </main>
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="footersection footerlogo">Brasa Burger</div>
+            <div class="footersection">Seg a Dom · 18h às 23h</div>
+            <div class="footersection">© 2026</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modalconteudo">
+            <h2 id="modalTitulo"></h2>
+            <p id="modalTexto"></p>
+            <button class="botao" id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>

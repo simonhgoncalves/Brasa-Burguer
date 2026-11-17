@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio | Brasa Burger</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+</head>
+
+<body class="claro">
+ <header>
+ <div class="wrap">
+  <nav>
+   <button id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+   <menu id="menu">
+    <li><a href="cardapio.html">Card&aacute;pio</a></li>
+    <li><a href="pedidos.html">Pedidos</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li class="menuauthmobile"><a id="btnEntrarMobile" href="login.html">Entrar</a></li>
+    <li class="menuauthmobile" id="menuCadastrarMobile"><a href="cadastro.html">Cadastrar</a></li>
+   </menu>
+  </nav>
+  <a id="logo" href="index.html">Brasa Burger</a>
+  <form id="formBusca" class="buscatopo" action="cardapio.html">
+   <input type="search" id="buscaTopo" maxlength="30" placeholder="Busque no card&aacute;pio..." aria-label="Buscar no card&aacute;pio">
+   <button type="submit" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+  </form>
+  <div class="acoes">
+   <a class="menucarrinho" href="carrinho.html" aria-label="Carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l2.4 12.1a2 2 0 0 0 2 1.6h10a2 2 0 0 0 2-1.6L22 7H5"/></svg><span id="contadorCarrinho">0</span></a>
+   <button id="temaBotao" type="button" aria-label="Alternar modo claro/escuro"><svg class="iconesol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg><svg class="iconelua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg></button>
+   <a class="menucontorno" id="btnEntrar" href="login.html">Entrar</a>
+   <a class="menucheio" id="btnCadastrar" href="cadastro.html">Cadastrar</a>
+  </div>
+ </div>
+</header>
+ <main>
+        <section id="produtos" class="pagina">
+            <h2>Cardápio</h2>
+            <div class="chips">
+                <button class="chip filtro marcado" data-cat="Todos">Todos</button>
+                <button class="chip filtro" data-cat="Clássicos">Clássicos</button>
+                <button class="chip filtro" data-cat="Artesanais">Artesanais</button>
+                <button class="chip filtro" data-cat="Combos">Combos</button>
+            </div>
+            <div id="product" class="grade">
+                <div class="productcard" data-cat="Clássicos">
+                    <div class="img"><img src="imagens/classico-brasa.jpg" alt="Clássico Brasa"></div>
+                    <div class="in">
+                        <h3>Clássico Brasa</h3>
+                        <p>Blend 160 g, queijo, alface e molho da casa</p>
+                        <div class="pr"><span class="price">R$ 28,90</span><button class="btnadd" data-nome="Clássico Brasa" data-preco="28.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Clássicos">
+                    <div class="img"><img src="imagens/cheddar-bacon.jpg" alt="Cheddar Bacon"></div>
+                    <div class="in">
+                        <h3>Cheddar Bacon</h3>
+                        <p>Cheddar cremoso, bacon crocante e cebola</p>
+                        <div class="pr"><span class="price">R$ 34,90</span><button class="btnadd" data-nome="Cheddar Bacon" data-preco="34.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Artesanais">
+                    <div class="img"><img src="imagens/duplo-smash.jpg" alt="Duplo Smash"></div>
+                    <div class="in">
+                        <h3>Duplo Smash</h3>
+                        <p>Dois smash burgers, picles e queijo prato</p>
+                        <div class="pr"><span class="price">R$ 38,90</span><button class="btnadd" data-nome="Duplo Smash" data-preco="38.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Artesanais">
+                    <div class="img"><img src="imagens/brasa-picante.jpg" alt="Brasa Picante"></div>
+                    <div class="in">
+                        <h3>Brasa Picante</h3>
+                        <p>Jalapeño, pepper jack e molho especial</p>
+                        <div class="pr"><span class="price">R$ 35,90</span><button class="btnadd" data-nome="Brasa Picante" data-preco="35.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Clássicos">
+                    <div class="img"><img src="imagens/frango-crocante.jpg" alt="Frango Crocante"></div>
+                    <div class="in">
+                        <h3>Frango Crocante</h3>
+                        <p>Filé empanado, alface e maionese</p>
+                        <div class="pr"><span class="price">R$ 31,90</span><button class="btnadd" data-nome="Frango Crocante" data-preco="31.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Artesanais">
+                    <div class="img"><img src="imagens/veggie-grill.jpg" alt="Veggie Grill"></div>
+                    <div class="in">
+                        <h3>Veggie Grill</h3>
+                        <p>Burger de grão-de-bico e legumes</p>
+                        <div class="pr"><span class="price">R$ 29,90</span><button class="btnadd" data-nome="Veggie Grill" data-preco="29.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Combos">
+                    <div class="img"><img src="imagens/combo-dupla.jpg" alt="Combo Dupla"></div>
+                    <div class="in">
+                        <h3>Combo Dupla</h3>
+                        <p>2 burgers, batata e 2 refrigerantes</p>
+                        <div class="pr"><span class="price">R$ 64,90</span><button class="btnadd" data-nome="Combo Dupla" data-preco="64.9">Adicionar</button></div>
+                    </div>
+                </div>
+                <div class="productcard" data-cat="Combos">
+                    <div class="img"><img src="imagens/combo-familia.jpg" alt="Combo Família"></div>
+                    <div class="in">
+                        <h3>Combo Família</h3>
+                        <p>3 burgers, batata grande e 3 refrigerantes</p>
+                        <div class="pr"><span class="price">R$ 89,90</span><button class="btnadd" data-nome="Combo Família" data-preco="89.9">Adicionar</button></div>
+                    </div>
+                </div>
+            </div>
+            <p id="semResultado">Nenhum resultado encontrado.</p>
+        </section>
+ </main>
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="footersection footerlogo">Brasa Burger</div>
+            <div class="footersection">Seg a Dom · 18h às 23h</div>
+            <div class="footersection">© 2026</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="modal">
+        <div class="modalconteudo">
+            <h2 id="modalTitulo"></h2>
+            <p id="modalTexto"></p>
+            <button class="botao" id="fecharModal">Fechar</button>
+        </div>
+    </div>
+
+    <div id="carrinhoLateral" aria-hidden="true">
+        <button id="fundoCarrinho" type="button" aria-label="Fechar carrinho"></button>
+        <aside id="painelCarrinho" role="dialog" aria-modal="true" aria-labelledby="tituloPainelCarrinho">
+            <div class="topoPainel">
+                <h2 id="tituloPainelCarrinho">Carrinho</h2>
+                <button id="fecharPainelCarrinho" type="button" aria-label="Fechar carrinho">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+                </button>
+            </div>
+            <div id="listaPainelCarrinho"></div>
+            <div class="resumoPainel">
+                <p>Subtotal <b id="subtotalPainel">R$ 0,00</b></p>
+                <p>Entrega <b id="entregaPainel">R$ 0,00</b></p>
+                <p class="totalPainel">Total <b id="totalPainel">R$ 0,00</b></p>
+                <label for="pagamentoPainel">Forma de pagamento</label>
+                <select id="pagamentoPainel"><option>Pix</option><option>Cartão</option><option>Dinheiro</option></select>
+                <button class="botao" id="finalizarPainel" type="button">Finalizar pedido</button>
+                <a href="carrinho.html">Ver carrinho completo</a>
+            </div>
+        </aside>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
